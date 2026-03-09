@@ -1,9 +1,9 @@
 {
-  "session_id": "",
+  "session_id": "fc-20260309-001",
   "version": "2.0",
-  "created_at": "",
-  "updated_at": "",
-  "current_phase": "not_started",
+  "created_at": "2026-03-09T00:00:00Z",
+  "updated_at": "2026-03-09T00:00:00Z",
+  "current_phase": "profiling",
   "constraints": {
     "target_client": "small_business_only",
     "operator": "solo",
@@ -14,7 +14,101 @@
     "risk_profile": "low_risk_mid_return",
     "remote_primary": true
   },
-  "profile": null,
+  "profile": {
+    "name": "男座 員也",
+    "age": 40,
+    "location": "東京都",
+    "current_rate": "月額300万円（業務委託・稼働率20%）",
+    "skills": [
+      "機械学習/データ分析（Python, LightGBM, SHAP, pandas, scikit-learn, Streamlit, SQL）- 10年 ★★★★★",
+      "生成AI/RAG開発（Dify, LangChain, OpenAI API, Claude, Gemini）- 2年 ★★★★★",
+      "Webアプリ開発（Streamlit, FastAPI, Docker, Git/GitHub）- 3年 ★★★★☆",
+      "データ可視化/BI（Tableau, Power BI, matplotlib, Plotly）- 8年 ★★★★☆",
+      "デジタルマーケティング（広告戦略, A/Bテスト, MMM, PSM分析, 市場推計）- 9年 ★★★★☆",
+      "プロジェクトマネジメント（PMO, プロダクト企画, アジャイル, コーチング）- 8年 ★★★★☆"
+    ],
+    "industries": [
+      "EC/デジタル広告（Amazon Ads運用, 広告ROI最適化, マーケットプレイス分析）",
+      "製薬/ヘルスケア（市場推計, KOL分析, 医師向けマーケティング, 薬事法対応）",
+      "SaaS/DX教育（生成AI研修設計・実施, データリテラシー向上プログラム）",
+      "金融/保険（リスク分析, 顧客セグメンテーション, レコメンデーション）",
+      "HR/不動産/小売（年収予測, 不動産価格査定, 売上予測, LTV予測, 離職リスク）"
+    ],
+    "career_history": [
+      {
+        "period": "2024〜現在",
+        "company": "株式会社STANDARD",
+        "role": "シニアマネージャー",
+        "highlights": "生成AI新規サービス立上げ&PMO。年商5,000万円達成。大手5社に生成AI活用推進支援提供、全社で1,000万円超の業務効率化実現"
+      },
+      {
+        "period": "2020〜2024",
+        "company": "アマゾンジャパン（広告部門）",
+        "role": "アソシエイト プリンシパル",
+        "highlights": "ML広告最適化でROAS+30%。累計7億円新規売上創出。BtoB新領域9億円規模に成長"
+      },
+      {
+        "period": "2016〜2020",
+        "company": "エムスリー株式会社",
+        "role": "BI&リサーチ チームリーダー",
+        "highlights": "11名のデータコンサルチームリード。全社売上伸長率1位。新規サービス1億円超"
+      },
+      {
+        "period": "2013〜2014",
+        "company": "IQVIA Services",
+        "role": "コントラクトMR",
+        "highlights": "データドリブン営業改革。全国849名中トップクラス売上増加率で優秀賞ノミネート"
+      }
+    ],
+    "current_ai_tools": [
+      "Claude Code（マルチエージェントシステム構築に活用、高習熟度）",
+      "Dify（RAG/AIエージェントワークフロー構築）",
+      "LangChain（RAG開発）",
+      "OpenAI API / Claude API / Gemini（生成AI開発）",
+      "ChatGPT（汎用）"
+    ],
+    "ai_delegatable_tasks": [
+      "リサーチ・情報収集の自動化（マルチエージェント型）",
+      "レポート・提案書の初稿作成",
+      "コード生成・デバッグ（Python, Web系）",
+      "データ分析・可視化の自動化",
+      "RAGシステム構築",
+      "プレゼン資料の自動生成"
+    ],
+    "human_only_strengths": [
+      "ビジネス課題→AI/データ施策への翻訳力（Amazon/エムスリー/STANDARDで実証）",
+      "クライアントとの信頼構築・コンサルティング",
+      "複数業界のドメイン知識（製薬・EC・金融・HR等、累計15年）",
+      "ROI/ビジネスインパクトへのコミット姿勢",
+      "PMO・チーム統率（最大12名のリモートチーム管理経験）"
+    ],
+    "qualifications": [
+      "統計検定2級（2015年）",
+      "TOEIC 885点（2022年）",
+      "Wharton School MOOCs 4コース修了",
+      "ロンドン大学 Managing the Company of the Future 修了"
+    ],
+    "awards": [
+      "Amazon A&Iアワード受賞「Insist on the highest standard」（上位2%未満）",
+      "鍋林 事業部最優秀セールスマン賞（10名中1位）",
+      "IQVIA クリエイティブ賞ノミネート（全国849名中10名未満）"
+    ],
+    "monthly_hour_constraint": "10-20",
+    "income_goal_jpy": null,
+    "absolute_nopes": [],
+    "remote_only": true,
+    "small_biz_connection": [],
+    "github_repos_count": 24,
+    "github_notable_projects": [
+      "academic-research-agent（学術論文自動リサーチ・PRISMA準拠レポート生成）",
+      "PPT-creater（4エージェントPPTX自動生成）",
+      "freelance-sales-pipeline（案件発掘→提案書→パイプライン管理の自動化）",
+      "beauty-research-agents（美容特化マルチエージェントリサーチ）",
+      "AI-ROI-simulator（AI投資ROIシミュレーション・プレゼン自動生成）",
+      "MachineLearning_App（5業種対応汎用ML予測システム、本番稼働中）"
+    ],
+    "status": "complete"
+  },
   "market_data": null,
   "ai_leverage": null,
   "feasibility": null,
