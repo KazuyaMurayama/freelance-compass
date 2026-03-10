@@ -2,8 +2,8 @@
   "session_id": "fc-20260309-001",
   "version": "2.0",
   "created_at": "2026-03-09T00:00:00Z",
-  "updated_at": "2026-03-09T00:00:00Z",
-  "current_phase": "profiling",
+  "updated_at": "2026-03-10T00:00:00Z",
+  "current_phase": "scouting",
   "constraints": {
     "target_client": "small_business_only",
     "operator": "solo",
@@ -109,7 +109,90 @@
     ],
     "status": "complete"
   },
-  "market_data": null,
+  "market_data": {
+    "research_date": "2026-03-10",
+    "market_context": {
+      "sme_ai_adoption_rate": "約5%（2025年時点）",
+      "government_budget_for_ai": "3,400億円（令和7年度補正予算）",
+      "key_subsidies": [
+        "デジタル化・AI導入補助金（旧IT導入補助金）: 最大450万円/年",
+        "中小企業省力化投資補助金: 最大1億円",
+        "ものづくり補助金・新事業進出補助金"
+      ],
+      "sme_biggest_pain": "何にAIを使えばいいか分からない・社内にAI人材がいない",
+      "freelance_ai_consultant_avg_rate": "月額90〜130万円（フルタイム相当）"
+    },
+    "candidate_niches": [
+      {
+        "niche": "中小企業向け生成AI導入伴走コンサル（月額リテイナー型）",
+        "target_client_type": "従業員5〜20名の中小企業（士業・クリニック・工務店・小売・EC事業者等）",
+        "demand_score": 5,
+        "competition_score": 3,
+        "typical_project_fee_jpy": "月額10〜30万円/社",
+        "estimated_human_hours": "3〜5h/社/月",
+        "estimated_effective_hourly_rate": "20000〜100000",
+        "unique_angle": "元Amazon/STANDARD出身のシニアDSが月額10万円〜で伴走。大手向け実績をスモールビジネス単価で提供する希少ポジション。補助金活用提案で顧客負担軽減可能",
+        "retainer_potential": 5,
+        "why_fits_profile": "STANDARDでの5社同時AI活用推進経験が直結。AI準備はClaude Codeで自動化し、人間は判断・提案・関係構築に集中"
+      },
+      {
+        "niche": "中小企業向けデータ分析・売上/需要予測サービス",
+        "target_client_type": "EC事業者・小売チェーン（5〜20店舗）・飲食・不動産",
+        "demand_score": 4,
+        "competition_score": 3,
+        "typical_project_fee_jpy": "スポット30〜100万円/件",
+        "estimated_human_hours": "10〜15h/件",
+        "estimated_effective_hourly_rate": "20000〜66000",
+        "unique_angle": "MachineLearning_App（本番稼働中）をベースに業種特化カスタマイズを高速提供。LightGBM+SHAPで解釈性担保",
+        "retainer_potential": 3,
+        "why_fits_profile": "Amazon広告でROAS+30%・累計7億円の予測モデル構築力が直結。既存Streamlitアプリ転用可能"
+      },
+      {
+        "niche": "業界特化型RAG/AIチャットボット構築（製薬・ヘルスケア向け）",
+        "target_client_type": "中小クリニック・調剤薬局チェーン・医療機器メーカー（中小）",
+        "demand_score": 4,
+        "competition_score": 2,
+        "typical_project_fee_jpy": "50〜150万円/件 + 月額保守5〜10万円",
+        "estimated_human_hours": "15〜20h/件",
+        "estimated_effective_hourly_rate": "25000〜75000",
+        "unique_angle": "エムスリー4年+IQVIA経験による製薬・医療ドメイン理解 × Dify/LangChainのRAG実装力。薬事法・医療情報取扱い理解がある技術者は極めて希少",
+        "retainer_potential": 4,
+        "why_fits_profile": "エムスリー・IQVIA経験で医療業界の文脈・用語・規制を理解した上でAI構築できる人材は市場にほぼいない"
+      },
+      {
+        "niche": "中小企業向けAI活用研修・ワークショップ",
+        "target_client_type": "従業員10〜50名の中小企業・商工会議所・業界団体",
+        "demand_score": 4,
+        "competition_score": 4,
+        "typical_project_fee_jpy": "15〜30万円/回（半日〜1日）",
+        "estimated_human_hours": "4〜6h/回",
+        "estimated_effective_hourly_rate": "25000〜50000",
+        "unique_angle": "STANDARDでの生成AI研修設計・実施経験をスモールビジネス向けにリパッケージ。PPT自動生成ツール（自作）で資料準備を90%自動化",
+        "retainer_potential": 2,
+        "why_fits_profile": "STANDARD研修事業経験あり。ただし当日拘束が必要でスケーラビリティに限界"
+      },
+      {
+        "niche": "補助金活用AI導入パッケージ",
+        "target_client_type": "IT導入補助金・省力化投資補助金対象の中小企業全般",
+        "demand_score": 5,
+        "competition_score": 4,
+        "typical_project_fee_jpy": "50〜200万円（顧客実質負担は1/3〜1/2）",
+        "estimated_human_hours": "10〜20h/件",
+        "estimated_effective_hourly_rate": "25000〜100000",
+        "unique_angle": "補助金で顧客負担を大幅軽減し営業ハードル低。AI-ROI-simulator（自作）で投資対効果を可視化",
+        "retainer_potential": 3,
+        "why_fits_profile": "AI導入実績（STANDARD 5社、ROI 300%超）が申請書類の説得力を高める。補助金申請自体は士業提携が必要"
+      }
+    ],
+    "excluded_niches": [
+      {"niche": "SNS投稿代行・ブログ量産", "reason": "価格競争激化。実質時給¥3,000〜5,000で¥10,000/h未満"},
+      {"niche": "クラウドソーシング経由単発AI開発", "reason": "手数料20%、低単価（5〜20万円）、スキルに見合わない"},
+      {"niche": "大規模MLシステム開発", "reason": "スモールビジネス予算（月¥5〜50万）を超過"},
+      {"niche": "動画編集・デザイン制作", "reason": "スキルセット不一致"},
+      {"niche": "SEO・Web制作の下請け", "reason": "コモディティ化。実質時給¥5,000〜8,000で¥10,000/h未満の可能性大"}
+    ],
+    "status": "complete"
+  },
   "ai_leverage": null,
   "feasibility": null,
   "revenue_model": null,
