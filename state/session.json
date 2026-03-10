@@ -505,9 +505,53 @@
   "final_recommendation": {
     "primary_niche": "中小企業向け生成AI導入伴走コンサル（月額リテイナー型）",
     "service_name": "AI経営パートナー",
-    "composite_score": 96,
-    "alr_range": "¥38,800〜59,250/h",
-    "year1_projection": "¥840万（保守的）",
+    "version": "3.0",
+    "composite_score": 97,
+    "alr_range": "¥38,800〜78,333/h",
+    "improved_alr_with_efficiency": "¥66,667/h（時間効率改善後）",
+    "scenarios_24m": {
+      "optimistic": {
+        "probability": "20%",
+        "cumulative_profit_24m": 37000000,
+        "month24_revenue": 2250000,
+        "month24_hourly_rate": 100000,
+        "avg_hourly_rate_24m": 72000
+      },
+      "standard": {
+        "probability": "50%",
+        "cumulative_profit_24m": 19800000,
+        "month24_revenue": 1200000,
+        "month24_hourly_rate": 66667,
+        "avg_hourly_rate_24m": 46000
+      },
+      "pessimistic": {
+        "probability": "20%",
+        "cumulative_profit_24m": 8500000,
+        "month24_revenue": 500000,
+        "month24_hourly_rate": 41667,
+        "avg_hourly_rate_24m": 25000
+      },
+      "worst": {
+        "probability": "10%",
+        "cumulative_profit_24m": 5300000,
+        "month24_revenue": 500000,
+        "month24_hourly_rate": 41667,
+        "avg_hourly_rate_24m": 15500,
+        "pivot_at_month": 12
+      }
+    },
+    "expected_value_24m": {
+      "cumulative_profit": 19060000,
+      "month24_revenue": 1175000,
+      "avg_hourly_rate": 44400
+    },
+    "key_improvements": [
+      "段階的価格設計（¥10万→¥15万→¥20万→¥30万）",
+      "時間効率57%改善（テンプレート資産化+CLAUDE.md自動化+非同期通信）",
+      "営業5層自動化（AIミニ診断/LinkedIn/士業紹介/商工会議所/顧客紹介）",
+      "解約防止3層構造（最低3ヶ月契約/価値可視化/スイッチングコスト）",
+      "本業並行でリスクゼロスタート"
+    ],
     "report_path": "outputs/recommendation.md",
     "status": "complete"
   },
