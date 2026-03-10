@@ -2,8 +2,8 @@
   "session_id": "fc-20260309-001",
   "version": "2.0",
   "created_at": "2026-03-09T00:00:00Z",
-  "updated_at": "2026-03-10T00:00:00Z",
-  "current_phase": "complete",
+  "updated_at": "2026-03-10T12:00:00Z",
+  "current_phase": "scouting",
   "constraints": {
     "target_client": "small_business_only",
     "operator": "solo",
@@ -111,86 +111,134 @@
   },
   "market_data": {
     "research_date": "2026-03-10",
+    "research_version": "v2.0_v7arch_aware",
     "market_context": {
-      "sme_ai_adoption_rate": "約5%（2025年時点）",
+      "sme_ai_adoption_rate_japan": "16%（2025年1月 楽天調査）、コアビジネスへの統合は1.9%（OECD 2024）",
+      "sme_ai_adoption_rate_global": "58%+（2025年、前年40%から急増）",
+      "japan_vs_global_gap": "日本のSMB AI導入率はG7最低水準→伸び代が最も大きい市場",
       "government_budget_for_ai": "3,400億円（令和7年度補正予算）",
       "key_subsidies": [
-        "デジタル化・AI導入補助金（旧IT導入補助金）: 最大450万円/年",
+        "デジタル化・AI導入補助金2026（旧IT導入補助金）: 通常枠最大450万円、補助率最大3/4。2026年3月30日申請開始",
         "中小企業省力化投資補助金: 最大1億円",
-        "ものづくり補助金・新事業進出補助金"
+        "ものづくり補助金・新事業進出補助金",
+        "人材開発支援助成金: AI研修費用の最大75%助成（中小企業）"
       ],
-      "sme_biggest_pain": "何にAIを使えばいいか分からない・社内にAI人材がいない",
-      "freelance_ai_consultant_avg_rate": "月額90〜130万円（フルタイム相当）"
+      "subsidy_key_change_2026": "IT導入補助金→『デジタル化・AI導入補助金』に名称変更。生成AI導入が明示的に補助対象に。みなし同一法人ルール削除で複数社申請容易に",
+      "sme_biggest_pain": "40%が『AIの潜在的メリットが分からない』、34%が技術人材不足、31%がROI懸念、28%が導入コスト",
+      "sme_most_used_ai": "コピーライティング43%、ルーチン業務自動化30%、翻訳23%、コード生成21%",
+      "freelance_ai_consultant_avg_rate": "月額108〜130万円（フルタイム相当）。AI専門ハイクラスは月150〜200万円+",
+      "2026_key_trend": "Agentic AI（自律型AI）の台頭。SMBはシンプルな実装→BPR（業務プロセス再構築）へ移行。『AIインテグレーター』への需要増",
+      "industry_ai_adoption_success": "テクノロジー88%、金融83%、製造75%。42.3%が100万円未満で開始"
+    },
+    "v7_architecture_impact": {
+      "plugin_model_advantage": "新業種追加0.5h/本（旧Dify: 5-10h/フロー）。10倍の展開速度で『薄利多業種』戦略が初めて成立",
+      "llm_router_cost_impact": "APIコスト-60%。月額5万円プランが採算ラインに乗る（旧: 月10万円〜でないと赤字）",
+      "self_service_ui_impact": "マイクロプラン工数0.3h→0.1h/社。サポート人件費が1/3に",
+      "newly_viable_niches": "美容室・整体院・不動産・飲食など月額5〜8万円帯の業種が新たに採算圏内に",
+      "docker_portability": "任意のPaaS/VPSに即移行可能。顧客のインフラ要件に柔軟対応"
     },
     "candidate_niches": [
       {
-        "niche": "中小企業向け生成AI導入伴走コンサル（月額リテイナー型）",
-        "target_client_type": "従業員5〜20名の中小企業（士業・クリニック・工務店・小売・EC事業者等）",
+        "niche": "士業事務所向けAI業務効率化プラットフォーム（税理士・社労士・行政書士）",
+        "target_client_type": "従業員1〜10名の士業事務所。税理士事務所約38,000件、社労士約44,000件、行政書士約50,000件が市場母数",
+        "demand_score": 5,
+        "competition_score": 2,
+        "typical_project_fee_jpy": "初期20万円 + 月額8〜15万円",
+        "estimated_human_hours": "初期3h + 月1.5h/社",
+        "estimated_effective_hourly_rate": "53000〜100000",
+        "unique_angle": "v7プラグイン設計で『税理士プラグイン』『社労士プラグイン』等を0.5hで追加展開。書類作成時間50%削減の実績値あり（業界データ）。守秘義務対応のオンプレ/プライベートクラウド対応がDockerで即可能",
+        "retainer_potential": 5,
+        "profile_fit_reason": "STANDARDでの大手5社AI活用推進経験を、士業の定型業務（記帳・申告書・就業規則・許認可申請）の自動化に応用。補助金申請は顧客側士業と連携でき、紹介ネットワーク構築にもなる"
+      },
+      {
+        "niche": "小規模クリニック・歯科向けAI受付・問診・集客パッケージ",
+        "target_client_type": "院長1名+スタッフ2〜5名の個人クリニック・歯科医院。全国約10万件の歯科+約10万件の診療所",
         "demand_score": 5,
         "competition_score": 3,
-        "typical_project_fee_jpy": "月額10〜30万円/社",
-        "estimated_human_hours": "3〜5h/社/月",
-        "estimated_effective_hourly_rate": "20000〜100000",
-        "unique_angle": "元Amazon/STANDARD出身のシニアDSが月額10万円〜で伴走。大手向け実績をスモールビジネス単価で提供する希少ポジション。補助金活用提案で顧客負担軽減可能",
+        "typical_project_fee_jpy": "初期15万円 + 月額5〜10万円",
+        "estimated_human_hours": "初期2h + 月1h/院",
+        "estimated_effective_hourly_rate": "50000〜100000",
+        "unique_angle": "v7のLLMルーターでAPIコスト-60%により月5万円プランが採算に乗る（旧Difyでは不可能）。LINE連携AI問診+予約自動化+リマインダーで電話対応50%削減・no-show率25%改善の実績値あり。エムスリー4年の医療業界理解がチャットボットの安全性設計に直結",
         "retainer_potential": 5,
-        "why_fits_profile": "STANDARDでの5社同時AI活用推進経験が直結。AI準備はClaude Codeで自動化し、人間は判断・提案・関係構築に集中"
+        "profile_fit_reason": "エムスリー・IQVIA経験で医療業界の規制・用語・現場感を理解。クリニック院長は『忙しくてAIを調べる時間もない』のが最大ペイン→伴走型が刺さる"
       },
       {
-        "niche": "中小企業向けデータ分析・売上/需要予測サービス",
-        "target_client_type": "EC事業者・小売チェーン（5〜20店舗）・飲食・不動産",
-        "demand_score": 4,
+        "niche": "中小EC事業者向けAI販促・LTV最大化コンサル",
+        "target_client_type": "月商100万〜3,000万円のEC事業者（Shopify/BASE/楽天出店者）",
+        "demand_score": 5,
         "competition_score": 3,
-        "typical_project_fee_jpy": "スポット30〜100万円/件",
-        "estimated_human_hours": "10〜15h/件",
-        "estimated_effective_hourly_rate": "20000〜66000",
-        "unique_angle": "MachineLearning_App（本番稼働中）をベースに業種特化カスタマイズを高速提供。LightGBM+SHAPで解釈性担保",
-        "retainer_potential": 3,
-        "why_fits_profile": "Amazon広告でROAS+30%・累計7億円の予測モデル構築力が直結。既存Streamlitアプリ転用可能"
+        "typical_project_fee_jpy": "月額10〜20万円（成果報酬オプション付）",
+        "estimated_human_hours": "月3〜4h/社",
+        "estimated_effective_hourly_rate": "25000〜66000",
+        "unique_angle": "Amazon Ads 4年のEC広告最適化経験（ROAS+30%、累計7億円）をスモールEC向けにリパッケージ。v7プラグインで『EC販促プラグイン』（商品説明自動生成+レビュー分析+メルマガ自動化+需要予測）を0.5hで展開。MachineLearning_AppのLTV予測モデルをSaaS化",
+        "retainer_potential": 4,
+        "profile_fit_reason": "Amazon広告でROAS+30%・BtoB新領域9億円の実績が最強の営業素材。EC事業者は効果で判断する文化→実績があれば価格交渉が少ない"
       },
       {
-        "niche": "業界特化型RAG/AIチャットボット構築（製薬・ヘルスケア向け）",
-        "target_client_type": "中小クリニック・調剤薬局チェーン・医療機器メーカー（中小）",
+        "niche": "工務店・リフォーム会社向けAI集客・見積自動化",
+        "target_client_type": "従業員5〜15名の地域工務店・リフォーム会社。全国約50万社",
         "demand_score": 4,
         "competition_score": 2,
-        "typical_project_fee_jpy": "50〜150万円/件 + 月額保守5〜10万円",
-        "estimated_human_hours": "15〜20h/件",
-        "estimated_effective_hourly_rate": "25000〜75000",
-        "unique_angle": "エムスリー4年+IQVIA経験による製薬・医療ドメイン理解 × Dify/LangChainのRAG実装力。薬事法・医療情報取扱い理解がある技術者は極めて希少",
+        "typical_project_fee_jpy": "初期20万円 + 月額8〜12万円",
+        "estimated_human_hours": "初期3h + 月1.5h/社",
+        "estimated_effective_hourly_rate": "53000〜80000",
+        "unique_angle": "AI検索最適化（AIO/LLMO）+AIチャットボット+見積自動化の3点セット。v7プラグインで『工務店プラグイン』として0.5hで展開。導入企業90%以上がROI実感（業界調査）。AI導入率15%→35%に急増中（2024→2026予測）で市場拡大フェーズ",
         "retainer_potential": 4,
-        "why_fits_profile": "エムスリー・IQVIA経験で医療業界の文脈・用語・規制を理解した上でAI構築できる人材は市場にほぼいない"
+        "profile_fit_reason": "デジタルマーケティング9年（広告戦略、A/Bテスト）の知見を地域密着ビジネスの集客に応用。工務店は『紹介頼み→デジタル集客』の転換期でAI人材が皆無"
       },
       {
-        "niche": "中小企業向けAI活用研修・ワークショップ",
-        "target_client_type": "従業員10〜50名の中小企業・商工会議所・業界団体",
+        "niche": "不動産会社向けAI物件マッチング・査定・追客自動化",
+        "target_client_type": "従業員3〜10名の地域密着型不動産会社",
         "demand_score": 4,
-        "competition_score": 4,
-        "typical_project_fee_jpy": "15〜30万円/回（半日〜1日）",
-        "estimated_human_hours": "4〜6h/回",
-        "estimated_effective_hourly_rate": "25000〜50000",
-        "unique_angle": "STANDARDでの生成AI研修設計・実施経験をスモールビジネス向けにリパッケージ。PPT自動生成ツール（自作）で資料準備を90%自動化",
-        "retainer_potential": 2,
-        "why_fits_profile": "STANDARD研修事業経験あり。ただし当日拘束が必要でスケーラビリティに限界"
+        "competition_score": 3,
+        "typical_project_fee_jpy": "初期25万円 + 月額10〜15万円",
+        "estimated_human_hours": "初期4h + 月2h/社",
+        "estimated_effective_hourly_rate": "50000〜75000",
+        "unique_angle": "不動産テック企業調査でAI利用率41.4%（2023年比4倍増）の急成長市場。v7プラグインで『不動産プラグイン』（AI物件レコメンド+自動査定+24h対応チャットボット+追客メール自動化）。大手はAI営業スタッフのテスト運用開始→小規模会社は取り残されるリスクを訴求",
+        "retainer_potential": 4,
+        "profile_fit_reason": "HR/不動産/小売の業界経験あり。不動産価格査定のMLモデル構築経験が直結。MachineLearning_Appの不動産特化カスタマイズで即デモ可能"
       },
       {
-        "niche": "補助金活用AI導入パッケージ",
-        "target_client_type": "IT導入補助金・省力化投資補助金対象の中小企業全般",
-        "demand_score": 5,
-        "competition_score": 4,
-        "typical_project_fee_jpy": "50〜200万円（顧客実質負担は1/3〜1/2）",
-        "estimated_human_hours": "10〜20h/件",
-        "estimated_effective_hourly_rate": "25000〜100000",
-        "unique_angle": "補助金で顧客負担を大幅軽減し営業ハードル低。AI-ROI-simulator（自作）で投資対効果を可視化",
-        "retainer_potential": 3,
-        "why_fits_profile": "AI導入実績（STANDARD 5社、ROI 300%超）が申請書類の説得力を高める。補助金申請自体は士業提携が必要"
+        "niche": "美容サロン・整体院向けAI予約・リピート最適化（v7新規開拓枠）",
+        "target_client_type": "個人〜3名規模の美容室・ネイル・エステ・整体院。全国約37万件の理美容室+約7万件の整体院",
+        "demand_score": 4,
+        "competition_score": 3,
+        "typical_project_fee_jpy": "月額5〜8万円（セルフサービスUI活用のマイクロプラン）",
+        "estimated_human_hours": "月0.5〜1h/店（セルフサービスUI中心）",
+        "estimated_effective_hourly_rate": "50000〜160000",
+        "unique_angle": "v7のLLMルーター（APIコスト-60%）+セルフサービスUI（工数0.1h/店）で初めて月額5万円帯が成立する業種。旧Difyでは絶対に採算が合わなかった。LINE連携予約自動化+リピート予測+キャンセル防止リマインダー。IT導入補助金の対象ツール認定も狙える",
+        "retainer_potential": 5,
+        "profile_fit_reason": "beauty-research-agents（美容特化リサーチエージェント）をGitHubで公開済み。サロン業界は価格感度が高いが月5万円なら『スタッフ1人の1日分以下』で訴求可能。数で稼ぐモデル"
+      },
+      {
+        "niche": "飲食店向けAI集客・口コミ分析・シフト最適化（v7新規開拓枠）",
+        "target_client_type": "従業員5〜15名の飲食店・カフェチェーン（2〜5店舗）",
+        "demand_score": 4,
+        "competition_score": 2,
+        "typical_project_fee_jpy": "月額5〜10万円",
+        "estimated_human_hours": "月1〜1.5h/社",
+        "estimated_effective_hourly_rate": "33000〜100000",
+        "unique_angle": "飲食業界は人手不足が最も深刻な業界の一つ。v7プラグインで『飲食プラグイン』（AI口コミ分析+Googleビジネスプロフィール最適化+需要予測ベースシフト自動提案+SNS投稿自動生成）。宿泊・飲食業のSNS集客ツールは月額5,000円〜で低価格化が進むが、分析・最適化層は未開拓",
+        "retainer_potential": 4,
+        "profile_fit_reason": "デジタルマーケティング9年の知見でGoogleマップ集客最適化が可能。飲食はリテイナー文化がある（食材仕入れ、清掃等で月額サービスに慣れている）"
       }
     ],
     "excluded_niches": [
-      {"niche": "SNS投稿代行・ブログ量産", "reason": "価格競争激化。実質時給¥3,000〜5,000で¥10,000/h未満"},
-      {"niche": "クラウドソーシング経由単発AI開発", "reason": "手数料20%、低単価（5〜20万円）、スキルに見合わない"},
-      {"niche": "大規模MLシステム開発", "reason": "スモールビジネス予算（月¥5〜50万）を超過"},
-      {"niche": "動画編集・デザイン制作", "reason": "スキルセット不一致"},
-      {"niche": "SEO・Web制作の下請け", "reason": "コモディティ化。実質時給¥5,000〜8,000で¥10,000/h未満の可能性大"}
+      {"niche": "SNS投稿代行・ブログ量産", "reason": "価格競争激化。AI生成コンテンツのコモディティ化で実質時給¥3,000〜5,000。¥10,000/h閾値未達"},
+      {"niche": "クラウドソーシング経由単発AI開発", "reason": "手数料20%、低単価（5〜20万円）、価格レースになりスキルに見合わない"},
+      {"niche": "大規模MLシステム開発（エンタープライズ向け）", "reason": "スモールビジネス予算（月¥5〜50万）を超過。月10-20h制約では品質担保不可"},
+      {"niche": "動画編集・デザイン制作", "reason": "スキルセット不一致。Canva AI等で急速にコモディティ化"},
+      {"niche": "SEO・Web制作の下請け", "reason": "コモディティ化が加速。AI検索（AIO/LLMO）への移行でSEO自体の価値が変容中。実質時給¥5,000〜8,000"},
+      {"niche": "汎用AIチャットボット構築（業界非特化）", "reason": "ChatGPT/Gemini/Copilotの標準機能で代替可能になりつつある。差別化困難。業界特化でないと¥10,000/h維持不可"},
+      {"niche": "AI研修単体（ワークショップのみ）", "reason": "当日拘束3h+が必須。月20h制約で月3-4回が上限。リテイナーに育ちにくい。v7アーキテクチャの恩恵を受けにくい。ただしリード獲得チャネルとしてはオプション活用可"},
+      {"niche": "RPA構築代行（UiPath/Power Automate）", "reason": "RPA市場は生成AIにより縮小トレンド。Agentic AIが従来のRPAを代替する流れが加速中（2026年予測）"}
     ],
+    "market_scout_notes": {
+      "v7_game_changer": "v7.0のプラグイン設計により、1業種あたりの追加コストが0.5hに激減。従来のDifyベース（5-10h/フロー）では採算が合わなかった月額5〜8万円帯の業種（美容室・飲食・整体院等）が新たに採算圏内に入った。これは競合のほとんどが気づいていない構造的優位性",
+      "llm_router_pricing_unlock": "LLMルーターによるAPIコスト60%削減で、低単価プランの利益率が劇的に改善。競合が月10万円〜でしか提供できないサービスを月5万円で提供しても利益が出る",
+      "multi_industry_strategy": "7ニッチ全てに同時展開するのではなく、プロファイル適合度の高い2業種（士業+クリニック）から並行テストし、勝ちパターンを確認後に横展開がリスク最小",
+      "subsidy_tailwind": "2026年『デジタル化・AI導入補助金』の名称変更は追い風。生成AI導入が明示的に補助対象になったことで、顧客への訴求が容易に。補助率最大3/4で顧客実質負担が大幅軽減"
+    },
     "status": "complete"
   },
   "ai_leverage": {
