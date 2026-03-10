@@ -3,7 +3,7 @@
   "version": "2.0",
   "created_at": "2026-03-09T00:00:00Z",
   "updated_at": "2026-03-10T00:00:00Z",
-  "current_phase": "scouting",
+  "current_phase": "complete",
   "constraints": {
     "target_client": "small_business_only",
     "operator": "solo",
@@ -193,9 +193,323 @@
     ],
     "status": "complete"
   },
-  "ai_leverage": null,
-  "feasibility": null,
-  "revenue_model": null,
-  "final_recommendation": null,
+  "ai_leverage": {
+    "analysis_date": "2026-03-10",
+    "alr_analysis": [
+      {
+        "niche": "中小企業向け生成AI導入伴走コンサル（月額リテイナー型）",
+        "ai_workflow_steps": [
+          {"step": 1, "task": "クライアント業務ヒアリング・課題特定", "executor": "人間", "hours": 1.0, "note": "Zoom/対面。信頼構築が最重要"},
+          {"step": 2, "task": "業界・競合のAI活用事例リサーチ", "executor": "AI(Claude Code)", "hours": 0.5, "note": "マルチエージェント自動リサーチ。人間は結果レビューのみ"},
+          {"step": 3, "task": "AI活用提案書・ロードマップ作成", "executor": "AI(Claude Code)+人間監督", "hours": 0.5, "note": "AI初稿→人間が業界文脈で調整"},
+          {"step": 4, "task": "AIツール選定・初期設定支援", "executor": "AI(Dify/Claude)+人間", "hours": 1.0, "note": "Difyフロー構築はAI、業務適合判断は人間"},
+          {"step": 5, "task": "月次レビュー・改善提案", "executor": "人間", "hours": 1.0, "note": "成果報告と次月アクション設計"},
+          {"step": 6, "task": "チャット相談対応（随時）", "executor": "人間", "hours": 0.5, "note": "Slack/LINE、月2-3回程度"}
+        ],
+        "total_hours_without_ai": 12.0,
+        "human_hours_with_ai": 4.5,
+        "ai_time_saving_pct": 62,
+        "typical_fee_jpy": 200000,
+        "alr_jpy": 44444,
+        "passes_10k_threshold": true,
+        "claude_code_use_cases": [
+          "業界AI活用事例の自動リサーチ（academic-research-agent応用）",
+          "提案書・レポートの自動生成（PPT-creater応用）",
+          "ROIシミュレーション自動作成（AI-ROI-simulator）",
+          "クライアント向けDifyワークフローの雛形自動生成"
+        ],
+        "key_insight": "売るのは『AIが作った成果物』ではなく『AIを使って業務課題を解決する伴走力』。大手コンサルが¥100万超で売るサービスを¥20万で提供する価格破壊ポジション"
+      },
+      {
+        "niche": "中小企業向けデータ分析・売上/需要予測サービス",
+        "ai_workflow_steps": [
+          {"step": 1, "task": "ビジネス課題ヒアリング・KPI設計", "executor": "人間", "hours": 2.0, "note": "何を予測すべきか判断は人間の専門性"},
+          {"step": 2, "task": "データ受領・前処理・EDA", "executor": "AI(Claude Code)", "hours": 1.0, "note": "pandas自動処理。人間は品質チェックのみ"},
+          {"step": 3, "task": "モデル構築・チューニング", "executor": "AI(Claude Code)", "hours": 1.0, "note": "MachineLearning_App転用。LightGBM自動学習"},
+          {"step": 4, "task": "SHAP解釈・ビジネスインサイト抽出", "executor": "AI+人間", "hours": 2.0, "note": "SHAP値はAI算出、業界文脈での解釈は人間"},
+          {"step": 5, "task": "レポート・ダッシュボード作成", "executor": "AI(Claude Code)", "hours": 1.0, "note": "Streamlitダッシュボード自動生成"},
+          {"step": 6, "task": "報告会・アクション提案", "executor": "人間", "hours": 1.5, "note": "経営層への報告と施策提案"}
+        ],
+        "total_hours_without_ai": 25.0,
+        "human_hours_with_ai": 8.5,
+        "ai_time_saving_pct": 66,
+        "typical_fee_jpy": 500000,
+        "alr_jpy": 58824,
+        "passes_10k_threshold": true,
+        "claude_code_use_cases": [
+          "データ前処理パイプライン自動生成",
+          "LightGBMモデル構築・ハイパーパラメータ最適化",
+          "SHAP可視化・レポート自動生成",
+          "Streamlitダッシュボードのカスタマイズ"
+        ],
+        "key_insight": "既存のMachineLearning_Appが『製品プロトタイプ』として即座に使える。デモを見せて受注→カスタマイズ納品の高速サイクル"
+      },
+      {
+        "niche": "業界特化型RAG/AIチャットボット構築（製薬・ヘルスケア向け）",
+        "ai_workflow_steps": [
+          {"step": 1, "task": "要件定義・対象ドキュメント整理", "executor": "人間", "hours": 3.0, "note": "医療文書の取扱い・薬事法対応の判断は人間必須"},
+          {"step": 2, "task": "RAGパイプライン構築（Dify）", "executor": "AI(Dify)+人間監督", "hours": 2.0, "note": "Difyのハイブリッド検索設定はAI、医療用語チューニングは人間"},
+          {"step": 3, "task": "プロンプト設計・安全性ガードレール", "executor": "AI+人間", "hours": 2.0, "note": "医療情報の誤回答防止は人間のドメイン知識が必須"},
+          {"step": 4, "task": "テスト・品質検証", "executor": "AI+人間", "hours": 3.0, "note": "テストケース生成はAI、医療的正確性の判断は人間"},
+          {"step": 5, "task": "導入支援・トレーニング", "executor": "人間", "hours": 2.0, "note": "現場スタッフへの使い方説明"},
+          {"step": 6, "task": "ドキュメント・運用マニュアル作成", "executor": "AI(Claude Code)", "hours": 0.5, "note": "自動生成→人間レビュー"}
+        ],
+        "total_hours_without_ai": 35.0,
+        "human_hours_with_ai": 12.5,
+        "ai_time_saving_pct": 64,
+        "typical_fee_jpy": 1000000,
+        "alr_jpy": 80000,
+        "passes_10k_threshold": true,
+        "claude_code_use_cases": [
+          "RAGパイプラインのコード自動生成",
+          "テストケース・評価データセット自動生成",
+          "医療用語辞書・同義語マッピング自動構築",
+          "運用マニュアル・FAQ自動生成"
+        ],
+        "key_insight": "競合最少ニッチ。医療×AI×RAGの三重掛けで参入障壁が非常に高い。月額保守で長期リテイナーに育てやすい"
+      },
+      {
+        "niche": "中小企業向けAI活用研修・ワークショップ",
+        "ai_workflow_steps": [
+          {"step": 1, "task": "研修ニーズヒアリング・カリキュラム設計", "executor": "AI+人間", "hours": 1.0, "note": "テンプレートベースでAI初稿→人間調整"},
+          {"step": 2, "task": "研修資料作成（スライド+ハンズオン教材）", "executor": "AI(PPT-creater)", "hours": 0.5, "note": "PPT-createrで90%自動生成"},
+          {"step": 3, "task": "リハーサル", "executor": "人間", "hours": 0.5, "note": "内容確認"},
+          {"step": 4, "task": "研修当日ファシリテーション", "executor": "人間", "hours": 3.0, "note": "半日研修。完全に人間の仕事"},
+          {"step": 5, "task": "フォローアップ資料・アンケート集計", "executor": "AI(Claude Code)", "hours": 0.5, "note": "自動生成"}
+        ],
+        "total_hours_without_ai": 12.0,
+        "human_hours_with_ai": 5.5,
+        "ai_time_saving_pct": 54,
+        "typical_fee_jpy": 200000,
+        "alr_jpy": 36364,
+        "passes_10k_threshold": true,
+        "claude_code_use_cases": [
+          "PPT-createrによるスライド自動生成",
+          "ハンズオン教材・ワークシート自動生成",
+          "アンケート集計・レポート自動生成"
+        ],
+        "key_insight": "ALRは高いが当日3h拘束が必須。月20h制約下では月3-4回が上限。リテイナーに育ちにくい"
+      },
+      {
+        "niche": "補助金活用AI導入パッケージ",
+        "ai_workflow_steps": [
+          {"step": 1, "task": "補助金適格性判断・最適補助金選定", "executor": "AI+人間", "hours": 1.0, "note": "補助金要件チェックはAI、最終判断は人間"},
+          {"step": 2, "task": "事業計画書・申請書類作成", "executor": "AI(Claude Code)+人間", "hours": 3.0, "note": "AI初稿→人間が実績・数値で肉付け。ただし士業連携推奨"},
+          {"step": 3, "task": "AI導入計画策定", "executor": "AI+人間", "hours": 2.0, "note": "AI-ROI-simulatorで投資対効果可視化"},
+          {"step": 4, "task": "AI導入実行（Dify/RAG等）", "executor": "AI(Dify)+人間監督", "hours": 4.0, "note": "技術実装はAI中心"},
+          {"step": 5, "task": "効果測定・報告書作成", "executor": "AI(Claude Code)", "hours": 1.0, "note": "自動レポート生成"},
+          {"step": 6, "task": "顧客コミュニケーション・調整", "executor": "人間", "hours": 2.0, "note": "補助金事務局との調整含む"}
+        ],
+        "total_hours_without_ai": 30.0,
+        "human_hours_with_ai": 13.0,
+        "ai_time_saving_pct": 57,
+        "typical_fee_jpy": 1000000,
+        "alr_jpy": 76923,
+        "passes_10k_threshold": true,
+        "claude_code_use_cases": [
+          "補助金要件チェック自動化",
+          "事業計画書・申請書類の初稿自動生成",
+          "AI-ROI-simulatorによるROI可視化",
+          "効果測定レポート自動生成"
+        ],
+        "key_insight": "顧客の実質負担が1/3〜1/2に。営業最強カード。ただし補助金申請は行政書士・税理士との提携必須で、自分だけでは完結しにくい"
+      }
+    ],
+    "disqualified_niches": [],
+    "critical_warning": "全5ニッチが¥10,000/h閾値をクリア。ただし『AIが作った成果物』を売るのではなく『AIを使って業界の問題を解決する能力』を売ることが価格競争回避の鍵",
+    "status": "complete"
+  },
+  "feasibility": {
+    "analysis_date": "2026-03-10",
+    "feasibility_scores": [
+      {
+        "niche": "中小企業向け生成AI導入伴走コンサル（月額リテイナー型）",
+        "scores": {
+          "small_biz_fit": 5,
+          "solo_operability": 5,
+          "sales_effort": 3,
+          "exit_ease": 5,
+          "ai_sustainability": 4
+        },
+        "composite_score": 22,
+        "risk_flags": [
+          "スモールビジネスオーナーとの既存接点がない→初期営業チャネル構築が最大課題",
+          "大手実績がスモールビジネスに『高そう』と思われるリスク→価格の見せ方に工夫要"
+        ],
+        "recommended": true,
+        "reasoning": "月額リテイナー型は安定収入の柱。4.5h/社で月¥20万。3社持てば月¥60万/13.5h。撤退は1ヶ月前通知で完了。固定費ゼロ。AI陳腐化してもコンサルの本質は『判断力の提供』なので影響小"
+      },
+      {
+        "niche": "中小企業向けデータ分析・売上/需要予測サービス",
+        "scores": {
+          "small_biz_fit": 4,
+          "solo_operability": 5,
+          "sales_effort": 3,
+          "exit_ease": 5,
+          "ai_sustainability": 4
+        },
+        "composite_score": 21,
+        "risk_flags": [
+          "スポット案件中心→案件切れのリスク",
+          "データ品質が顧客依存（中小企業はデータが散乱していることが多い）",
+          "MachineLearning_Appと類似サービスの価格競争リスク（Streamlit公開中）"
+        ],
+        "recommended": true,
+        "reasoning": "既存アプリをデモとして即座に営業可能。ALR¥58,824は全ニッチ中2位の高さ。ただしリテイナーに育ちにくい→コンサル型と組み合わせが最適"
+      },
+      {
+        "niche": "業界特化型RAG/AIチャットボット構築（製薬・ヘルスケア向け）",
+        "scores": {
+          "small_biz_fit": 3,
+          "solo_operability": 4,
+          "sales_effort": 2,
+          "exit_ease": 3,
+          "ai_sustainability": 5
+        },
+        "composite_score": 17,
+        "risk_flags": [
+          "中小クリニック・薬局のAI予算は限定的（月¥5〜10万が上限のケースも）",
+          "医療系は意思決定が慎重→リードタイム長い",
+          "12.5h/件は月20h制約下で同時並行が難しい",
+          "薬機法・個人情報保護法の対応コストが読みにくい"
+        ],
+        "recommended": false,
+        "reasoning": "競合最少で希少性は最高だが、スモールビジネス文脈では予算・意思決定速度・法規制がネック。大手向け案件には最適だが月10-20h制約では非効率。中長期の検討ニッチとして温存"
+      },
+      {
+        "niche": "中小企業向けAI活用研修・ワークショップ",
+        "scores": {
+          "small_biz_fit": 4,
+          "solo_operability": 5,
+          "sales_effort": 3,
+          "exit_ease": 5,
+          "ai_sustainability": 3
+        },
+        "composite_score": 20,
+        "risk_flags": [
+          "当日拘束3h→月20h制約で月3-4回が上限",
+          "リテイナーに育ちにくい（単発イベント型）",
+          "AI研修市場は参入者増加中→差別化維持にコスト",
+          "商工会議所ルートは単価が抑えられがち"
+        ],
+        "recommended": true,
+        "reasoning": "コンサル型リテイナーへの入口として有効。研修→AI導入伴走コンサルへのアップセル導線。単体ではスケールしにくいがリード獲得チャネルとして機能"
+      },
+      {
+        "niche": "補助金活用AI導入パッケージ",
+        "scores": {
+          "small_biz_fit": 4,
+          "solo_operability": 3,
+          "sales_effort": 4,
+          "exit_ease": 3,
+          "ai_sustainability": 4
+        },
+        "composite_score": 18,
+        "risk_flags": [
+          "補助金申請は行政書士・税理士との連携必須→個人完結しない",
+          "補助金制度の変更リスク（年度ごとに要件変更あり）",
+          "採択〜入金のリードタイムが長い（3〜6ヶ月）",
+          "13h/件→月1件が上限、同時並行不可"
+        ],
+        "recommended": false,
+        "reasoning": "営業ツールとしては最強（顧客負担半額以下）だが、個人完結しない・リードタイム長い・制度変更リスクの3点が月10-20h制約下ではリスク。コンサル提案時のオプションとして活用すべき"
+      }
+    ],
+    "summary": {
+      "recommended_niches": ["生成AI導入伴走コンサル（主軸）", "データ分析・予測（高ALRスポット）", "AI研修（リード獲得チャネル）"],
+      "deferred_niches": ["製薬ヘルスケアRAG（中長期）", "補助金パッケージ（オプション提案）"],
+      "optimal_combination": "リテイナー型コンサル×2-3社（主軸収入）+ 予測分析スポット月1件（高ALR）+ 研修月1回（新規リード獲得）"
+    },
+    "status": "complete"
+  },
+  "revenue_model": {
+    "analysis_date": "2026-03-10",
+    "portfolio_design": {
+      "retainer_hours": "9〜13.5h（コンサルリテイナー2〜3社 × 4.5h/社）",
+      "spot_hours": "4〜8.5h（予測分析スポット月0-1件）",
+      "sales_hours": "2〜4h（研修月0-1回をリード獲得に活用 + LinkedIn/紹介営業）",
+      "total_monthly_hours": "15〜20h",
+      "composition_rationale": "リテイナー60-70%で安定収入を確保し、スポットで高ALR案件を追加。研修は営業コストゼロの新規獲得チャネル"
+    },
+    "scenarios": {
+      "launch_3m": {
+        "description": "立ち上げ期：リテイナー1社 + 研修月1回で地盤づくり",
+        "retainer_clients": 1,
+        "spot_projects": 0,
+        "workshops": 1,
+        "total_hours": 10,
+        "monthly_revenue_jpy": 400000,
+        "monthly_ai_tool_cost_jpy": 12000,
+        "net_monthly_jpy": 388000,
+        "effective_hourly_rate": 38800,
+        "breakdown": {
+          "retainer": "¥200,000（1社 × ¥200,000）",
+          "spot": "¥0",
+          "workshop": "¥200,000（1回 × ¥200,000）"
+        }
+      },
+      "stable_6m": {
+        "description": "安定期：リテイナー2社 + スポット月1件 + 研修月1回",
+        "retainer_clients": 2,
+        "spot_projects": 1,
+        "workshops": 1,
+        "total_hours": 18,
+        "monthly_revenue_jpy": 900000,
+        "monthly_ai_tool_cost_jpy": 15000,
+        "net_monthly_jpy": 885000,
+        "effective_hourly_rate": 49167,
+        "breakdown": {
+          "retainer": "¥400,000（2社 × ¥200,000）",
+          "spot": "¥300,000（予測分析1件）",
+          "workshop": "¥200,000（1回 × ¥200,000）"
+        }
+      },
+      "optimized_12m": {
+        "description": "最適化期：リテイナー3社 + スポット月1件。研修は紹介ベースで月0-1回",
+        "retainer_clients": 3,
+        "spot_projects": 1,
+        "workshops": 0.5,
+        "total_hours": 20,
+        "monthly_revenue_jpy": 1200000,
+        "monthly_ai_tool_cost_jpy": 15000,
+        "net_monthly_jpy": 1185000,
+        "effective_hourly_rate": 59250,
+        "breakdown": {
+          "retainer": "¥600,000（3社 × ¥200,000）",
+          "spot": "¥500,000（予測分析1件、単価UP）",
+          "workshop": "¥100,000（隔月1回、平均）"
+        }
+      }
+    },
+    "monthly_ai_tool_cost": {
+      "claude_pro": 5000,
+      "cursor_pro": 4000,
+      "dify_cloud": 3000,
+      "total": 12000,
+      "note": "収益の3〜10%程度。十分転嫁可能"
+    },
+    "break_even_months": 1,
+    "annual_projection": {
+      "year1_total_jpy": 8400000,
+      "year1_avg_monthly_jpy": 700000,
+      "year1_avg_hourly_rate": 43750,
+      "note": "3ヶ月の立ち上げ期を含む保守的試算"
+    },
+    "pricing_strategy": {
+      "retainer_anchor": "大手コンサルファームの生成AI活用支援は月額¥100〜300万。月額¥20万は1/5〜1/15の破格",
+      "value_message": "元Amazon シニアDS × STANDARDシニアMgrが月額¥20万で伴走。ROI 300%超の実績",
+      "upsell_path": "リテイナー¥20万 → 実績が出たら¥30万にアップ or 追加プロジェクト受注"
+    },
+    "status": "complete"
+  },
+  "final_recommendation": {
+    "primary_niche": "中小企業向け生成AI導入伴走コンサル（月額リテイナー型）",
+    "service_name": "AI経営パートナー",
+    "composite_score": 96,
+    "alr_range": "¥38,800〜59,250/h",
+    "year1_projection": "¥840万（保守的）",
+    "report_path": "outputs/recommendation.md",
+    "status": "complete"
+  },
   "error_log": []
 }
