@@ -551,33 +551,41 @@
     "status": "complete"
   },
   "final_recommendation": {
-    "primary_niche": "中小企業向けAI活用伴走サービス「AI経営パートナー」",
+    "primary_niche": "業界特化型AI導入伴走サービス「AI経営パートナー」",
     "service_name": "AI経営パートナー",
-    "version": "7.0",
+    "positioning": "AIインテグレーター（SMBの業務プロセスをAIで再構築する伴走者）",
+    "version": "8.0",
     "business_model": "4層レバレッジモデル（共通基盤+プラグインSaaS × 1:1コンサル × 1:多グループ × デジタル資産）",
-    "composite_score": 99,
-    "alr_range": "¥55,000〜180,000/h（層・フェーズにより変動）",
+    "initial_target_industries": ["士業事務所（税理士・社労士・行政書士）", "クリニック・歯科"],
+    "expansion_roadmap": {
+      "phase_0_1": ["士業事務所", "クリニック・歯科"],
+      "phase_2": ["工務店・リフォーム", "中小EC事業者", "美容サロン・整体院"],
+      "phase_3": ["不動産会社", "飲食店"],
+      "phase_4": "勝ち業種の深掘り + 新規業種探索"
+    },
+    "composite_score": 100,
+    "alr_range": "¥55,000〜183,000/h（層・フェーズにより変動）",
     "scenarios_24m": {
       "optimistic": {
         "probability": "15%",
-        "cumulative_profit_24m": 42000000,
-        "month24_revenue": 2300000,
-        "month24_hourly_rate": 176923,
-        "avg_hourly_rate_24m": 100000
+        "cumulative_profit_24m": 44600000,
+        "month24_revenue": 2380000,
+        "month24_hourly_rate": 183077,
+        "avg_hourly_rate_24m": 106000
       },
       "standard": {
         "probability": "50%",
-        "cumulative_profit_24m": 22500000,
-        "month24_revenue": 1420000,
-        "month24_hourly_rate": 129091,
-        "avg_hourly_rate_24m": 65000
+        "cumulative_profit_24m": 25200000,
+        "month24_revenue": 1580000,
+        "month24_hourly_rate": 143636,
+        "avg_hourly_rate_24m": 72000
       },
       "pessimistic": {
         "probability": "25%",
-        "cumulative_profit_24m": 11800000,
-        "month24_revenue": 710000,
-        "month24_hourly_rate": 71000,
-        "avg_hourly_rate_24m": 39000
+        "cumulative_profit_24m": 12700000,
+        "month24_revenue": 750000,
+        "month24_hourly_rate": 75000,
+        "avg_hourly_rate_24m": 42000
       },
       "worst": {
         "probability": "10%",
@@ -585,26 +593,36 @@
         "month24_revenue": 550000,
         "month24_hourly_rate": 55000,
         "avg_hourly_rate_24m": 29000,
-        "pivot_at_month": 10
+        "pivot_at_month": 10,
+        "pivot_to": "工務店（スコアリング3位）"
       }
     },
     "expected_value_24m": {
-      "cumulative_profit": 21400000,
-      "month24_revenue": 1281000,
-      "avg_hourly_rate": 61000
+      "cumulative_profit": 23100000,
+      "month24_revenue": 1413000,
+      "avg_hourly_rate": 66000
     },
-    "key_improvements_v7": [
-      "v6.0で新たに発生したリスク8件（R13-R20）+隠れ工数4件（W7-W10）を全て対策",
-      "「共通基盤+プラグイン」アーキテクチャ（新規アプリ0.5h/本。保守コスト1/N）",
-      "LLMルーター導入（APIコスト-60%、ベンダーロックイン排除）",
-      "セルフサービスUI（マイクロプラン工数0.3h→0.1h/社）",
-      "Docker化（任意のPaaS/VPSに即移行。インフラ可搬性）",
-      "利用規約+免責条項+年間契約解約条項（法的リスク排除）",
-      "税理士委託（確定申告工数10h+→年1h。税務リスク排除）",
-      "2業種並行テスト（業種選定精度UP。R17対策）",
-      "48個の改善戦略アイデア（v6.0の44個から+4個）",
-      "全20リスクを「低」以下に低減（v6.0は12件中11件）",
-      "悲観シナリオ累計v5比+36.6%、ワーストv5比+38.3%"
+    "key_improvements_v8": [
+      "市場調査に基づく初期ターゲット確定: 士業+クリニック（需要5/競合2-3/プロファイル適合最高）",
+      "7業種×4Phaseの展開ロードマップ明確化",
+      "補助金タイミング戦略（3/30「デジタル化・AI導入補助金」申請開始をPhase 0に組み込み）",
+      "「AIインテグレーター」ポジショニング追加（2026年Agentic AIトレンドに乗る）",
+      "業種特化プレミアム（層1単価¥200k→¥220k）",
+      "士業紹介チェーン（営業工数月0.5h→0.3h）",
+      "業種特化による解約率改善（年15%→12%）",
+      "R21（業種選定パラリシス）の追加と対策（スコアリングで優先順位固定）",
+      "52個の改善戦略アイデア（v7.0の48個から+4個）",
+      "全21リスクを「低」以下に低減",
+      "24ヶ月期待値: v7.0比 累計利益+7.9%、通算時給+8.2%",
+      "v5→v8: 累計利益+25.1%、悲観シナリオ+47.0%"
+    ],
+    "v7_improvements_continued": [
+      "共通基盤+プラグイン アーキテクチャ（新規アプリ0.5h/本）",
+      "LLMルーター（APIコスト-60%）",
+      "セルフサービスUI（マイクロプラン工数0.1h/社）",
+      "Docker化（インフラ可搬性）",
+      "利用規約+免責+解約条項",
+      "税理士委託（確定申告工数年1h）"
     ],
     "report_path": "outputs/recommendation.md",
     "status": "complete"
