@@ -505,58 +505,58 @@
   "final_recommendation": {
     "primary_niche": "中小企業向けAI活用伴走サービス「AI経営パートナー」",
     "service_name": "AI経営パートナー",
-    "version": "6.0",
-    "business_model": "4層レバレッジモデル（自前AIツールSaaS × 1:1コンサル × 1:多グループ × デジタル資産）",
+    "version": "7.0",
+    "business_model": "4層レバレッジモデル（共通基盤+プラグインSaaS × 1:1コンサル × 1:多グループ × デジタル資産）",
     "composite_score": 99,
-    "alr_range": "¥55,000〜160,000/h（層・フェーズにより変動）",
+    "alr_range": "¥55,000〜180,000/h（層・フェーズにより変動）",
     "scenarios_24m": {
       "optimistic": {
         "probability": "15%",
-        "cumulative_profit_24m": 40000000,
-        "month24_revenue": 2200000,
-        "month24_hourly_rate": 157143,
-        "avg_hourly_rate_24m": 95000
+        "cumulative_profit_24m": 42000000,
+        "month24_revenue": 2300000,
+        "month24_hourly_rate": 176923,
+        "avg_hourly_rate_24m": 100000
       },
       "standard": {
         "probability": "50%",
-        "cumulative_profit_24m": 21500000,
-        "month24_revenue": 1330000,
-        "month24_hourly_rate": 120909,
-        "avg_hourly_rate_24m": 62000
+        "cumulative_profit_24m": 22500000,
+        "month24_revenue": 1420000,
+        "month24_hourly_rate": 129091,
+        "avg_hourly_rate_24m": 65000
       },
       "pessimistic": {
         "probability": "25%",
-        "cumulative_profit_24m": 10800000,
-        "month24_revenue": 630000,
-        "month24_hourly_rate": 63000,
-        "avg_hourly_rate_24m": 36000
+        "cumulative_profit_24m": 11800000,
+        "month24_revenue": 710000,
+        "month24_hourly_rate": 71000,
+        "avg_hourly_rate_24m": 39000
       },
       "worst": {
         "probability": "10%",
-        "cumulative_profit_24m": 6800000,
-        "month24_revenue": 500000,
-        "month24_hourly_rate": 50000,
-        "avg_hourly_rate_24m": 27000,
+        "cumulative_profit_24m": 7400000,
+        "month24_revenue": 550000,
+        "month24_hourly_rate": 55000,
+        "avg_hourly_rate_24m": 29000,
         "pivot_at_month": 10
       }
     },
     "expected_value_24m": {
-      "cumulative_profit": 20200000,
-      "month24_revenue": 1188000,
-      "avg_hourly_rate": 58500
+      "cumulative_profit": 21400000,
+      "month24_revenue": 1281000,
+      "avg_hourly_rate": 61000
     },
-    "key_improvements_v6": [
-      "Dify→Python/Claude Code転換（プラットフォームリスク排除+構築速度70-80%向上+ALR ¥70k→¥117k/h）",
-      "12リスク対策マトリクス（12件中11件を残存リスク「低」以下に低減）",
-      "6隠れ工数の発見と対策（管理業務・コンテンツ制作等を全シナリオに計上してなお改善）",
-      "マイクロプラン¥50,000/月 新設（裾野拡大→アップセル導線。悲観シナリオ初受注1ヶ月前倒し）",
-      "「クローン戦略」（知識外部化→Claude Codeが80%の判断を再現。per-client工数2.5h→2h）",
-      "「休止プロトコル」（1-2週離脱可能な設計。層0は自動継続）",
-      "「収入フロア」設計（層0ストック収入で1社解約の影響を最大25%に抑制）",
-      "2層集中→段階展開（最初6ヶ月は層0+層1のみ。認知負荷を管理）",
-      "4段階ゲート（Gate 0〜3。利益相反事前確認+早期ピボット検知）",
-      "44個の改善戦略アイデア（v5.0の40個から更新+4個追加）",
-      "悲観シナリオ+25%、ワースト+27%のダウンサイド大幅改善"
+    "key_improvements_v7": [
+      "v6.0で新たに発生したリスク8件（R13-R20）+隠れ工数4件（W7-W10）を全て対策",
+      "「共通基盤+プラグイン」アーキテクチャ（新規アプリ0.5h/本。保守コスト1/N）",
+      "LLMルーター導入（APIコスト-60%、ベンダーロックイン排除）",
+      "セルフサービスUI（マイクロプラン工数0.3h→0.1h/社）",
+      "Docker化（任意のPaaS/VPSに即移行。インフラ可搬性）",
+      "利用規約+免責条項+年間契約解約条項（法的リスク排除）",
+      "税理士委託（確定申告工数10h+→年1h。税務リスク排除）",
+      "2業種並行テスト（業種選定精度UP。R17対策）",
+      "48個の改善戦略アイデア（v6.0の44個から+4個）",
+      "全20リスクを「低」以下に低減（v6.0は12件中11件）",
+      "悲観シナリオ累計v5比+36.6%、ワーストv5比+38.3%"
     ],
     "report_path": "outputs/recommendation.md",
     "status": "complete"
