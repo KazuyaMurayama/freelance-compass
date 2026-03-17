@@ -551,16 +551,17 @@
     "status": "complete"
   },
   "final_recommendation": {
-    "primary_niche": "業界特化型AI導入伴走サービス「AI経営パートナー」",
-    "service_name": "AI経営パートナー",
-    "positioning": "AIインテグレーター（SMBの業務プロセスをAIで再構築する伴走者）",
-    "version": "8.0",
-    "business_model": "4層レバレッジモデル（共通基盤+プラグインSaaS × 1:1コンサル × 1:多グループ × デジタル資産）",
-    "initial_target_industries": ["士業事務所（税理士・社労士・行政書士）", "クリニック・歯科"],
+    "primary_niche": "EC事業者向けAI実装パートナー（Shopify特化）",
+    "service_name": "AI実装パートナー",
+    "positioning": "動くツールを作って渡す実装者（コンサルではなくパートナー）",
+    "version": "9.0",
+    "version_note": "v8→v9: Day 3統合判定(2026-03-17)の結果を反映。ターゲットをEC単一に集中、サービス名称変更、3ステップ価格導入",
+    "business_model": "3ステップ導線（無料診断→有償診断¥30k→スポット実装¥80k→月額リテイナー¥50k-180k）",
+    "initial_target_industries": ["EC事業者（月商500-1,500万・Shopify・アパレル/コスメ/雑貨）"],
     "expansion_roadmap": {
-      "phase_0_1": ["士業事務所", "クリニック・歯科"],
-      "phase_2": ["工務店・リフォーム", "中小EC事業者", "美容サロン・整体院"],
-      "phase_3": ["不動産会社", "飲食店"],
+      "phase_0_1": ["EC事業者（Shopify・月商500-1,500万・アパレル/コスメ/雑貨）"],
+      "phase_2": ["EC事業者（Shopify・食品/家電等への業種拡大）", "クリニック・歯科（EC事例3件蓄積後）"],
+      "phase_3": ["士業事務所", "工務店・リフォーム", "美容サロン・整体院"],
       "phase_4": "勝ち業種の深掘り + 新規業種探索"
     },
     "composite_score": 100,
