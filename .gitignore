@@ -1,0 +1,4 @@
+tools/a1_diagnostic/fonts/
+tools/a1_diagnostic/test_output.pdf
+*.pyc
+__pycache__/
