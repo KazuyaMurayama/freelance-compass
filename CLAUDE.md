@@ -5,10 +5,12 @@
 ## セッション開始時に必ず読むファイル
 
 1. **本ファイル（CLAUDE.md）** — 前提制約・コマンド・実行ルール
-2. **`tasks.md`** — セッション間引継ぎタスクリスト（次にやること・優先順位）
-3. **`outputs/session-summary-WDemK.md`** — 直近セッションの要約
-4. **`outputs/recommendation.md`**（v29.0）が最新であることを確認
-5. **`state/session.json`** でフェーズ進捗を確認
+2. **`tasks.md`** — セッション間引継ぎタスクリスト（次にやること・優先順位・戦略バージョン履歴）
+3. **🟢 最新戦略**: [`integrated-business-plan-v2.md`](https://github.com/KazuyaMurayama/freelance-compass/blob/claude/integrated-business-plan/outputs/integrated-business-plan-v2.md)（2026-03-25 改訂、士業+小売/EC、`claude/integrated-business-plan` ブランチ）
+4. `outputs/session-summary-WDemK.md` — 直近セッションの要約（v29.0 時点・参考）
+5. `state/session.json` でフェーズ進捗を確認
+
+> ⚠️ `outputs/recommendation.md` は v9.0（士業+クリニック、旧版）または v29.0（EC+クリニック、中間版）。**最新は integrated v2**。混乱したら `tasks.md` の「戦略バージョン履歴」を確認。
 
 ## 関連リポジトリ
 
@@ -17,7 +19,7 @@
 | 本リポ | 上流：事業戦略・意思決定（6エージェントで戦略策定） |
 | `kazuyamurayama/machinelearning_app` | 下流：18 Streamlit アプリ実装と顧客獲得 |
 
-セッション開始時は `machinelearning_app/tasks.md` も突き合わせる。**戦略 vs 実装ターゲットの不整合がないか確認**（詳細は本リポ `tasks.md` の戦略整合性アラート）。
+セッション開始時は `machinelearning_app/tasks.md` も突き合わせる。**v2 (士業+小売/EC) で実装と戦略が整合済み**。
 
 ## 前提制約（全エージェント共通・厳守）
 
@@ -27,6 +29,7 @@
 - **最低ライン**: 実質時給（案件単価 ÷ 人間稼働時間）が ¥10,000未満のニッチは自動却下
 - **事業方針**: ローリスク・ミドルリターン型。ハイリスク・ハイリターンは避ける
 - **ワークスタイル**: リモートメイン。月5時間以内の移動・現地ワークはOK
+- **稼働上限**: v2 で月 32時間に拡張（旧 v9.0/v29.0 では月 10〜20h 想定）
 
 ## コマンド一覧
 
@@ -49,12 +52,13 @@
 4. 前フェーズの出力が `null` のまま次フェーズに進まないこと（`/full-run` 時）
 5. ¥10,000/h 未満のニッチは理由を明記して即時除外すること
 6. **実行フェーズ（A1ツール / ビザスク等）の進捗は `tasks.md` に必ず反映**
+7. **戦略文書を読む際は必ず最新版（integrated v2）を確認**。古い `recommendation.md` を引用する場合は版を明記
 
 ## state/session.json の構造
 
 セッション状態を一元管理する。各エージェントは自身の担当キーのみ更新する。
 `current_phase` は `not_started` → `profiling` → `scouting` → `ai_leverage` → `feasibility` → `revenue_model` → `synthesizing` → `complete` の順に遷移する。
-※ v29.0 完成後の実行フェーズは `tasks.md` で別途管理。
+※ v2 完成後の実行フェーズは `tasks.md` で別途管理。
 
 ## モデル使い分け
 
@@ -65,5 +69,6 @@
 
 1. `tasks.md` の「次にやる」「完了」を更新
 2. **machinelearning_app に影響する戦略変化があれば同リポの `tasks.md` も更新**
-3. 重大変更時は `outputs/session-summary-<branchID>.md` を追加
-4. コミット → push
+3. 戦略の新版を作成した場合は `tasks.md` の「戦略バージョン履歴」を更新
+4. 重大変更時は `outputs/session-summary-<branchID>.md` を追加
+5. コミット → push
