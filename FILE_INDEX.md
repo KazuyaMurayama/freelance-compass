@@ -1,83 +1,199 @@
-# FILE_INDEX.md — freelance-compass
+# FILE_INDEX — freelance-compass
 
-> **新セッション開始時に必ずこのファイルを読む。**
-> ファイル追加・削除・移動時は必ずこのファイルを更新すること。
-> 最終更新: 2026-04-30
+> ⚠️ このファイルは自動生成です。手動編集は次回更新で上書きされます。
 
-## 概要
-フリーランス転身を目指すためのビジネス計画・市場調査・仮説検証・MVP設計ドキュメント群。診断ツール（Streamlit）付き。
-
-**スタック:** Python, Streamlit, Markdown
-
----
-
-## 📋 最初に読むべきファイル
-
-| 優先度 | ファイル | 内容 |
-|---|---|---|
-| ★★★ | `CLAUDE.md` | 運用ルール・指針 |
-| ★★★ | `outputs/integrated-business-plan-v2/` | 統合ビジネスプランv2 |
-| ★★★ | `tools/a1_diagnostic/app.py` | 診断ツールメインアプリ |
-| ★★ | `outputs/ai-utilization-plan-v7.md` | AI活用計画v7 |
-| ★★ | `outputs/shigyou-mvp-roadmap.md` | 士業MVP ロードマップ |
+| 項目 | 値 |
+|---|---|
+| リポジトリ | KazuyaMurayama/freelance-compass |
+| ブランチ | main |
+| 総ファイル数 | 59 |
+| 最終更新 | 2026-05-02 |
+| 管理者 | 男座員也（Kazuya Oza） |
 
 ---
 
-## 🗂️ ディレクトリ構造
+## カテゴリ別サマリー
+
+| カテゴリ | ファイル数 |
+|---|---|
+| Documentation | 48 |
+| Code | 6 |
+| Data | 1 |
+| Asset | 1 |
+| Config | 2 |
+| Other | 1 |
+
+---
+
+## ディレクトリ構成
 
 ```
-freelance-compass/
-├── CLAUDE.md                    ← 最重要ルール
+.
+├── outputs/
+│   ├── customer-research/
+│   │   ├── full_report_v2.md
+│   │   ├── full_report.md
+│   │   ├── meta_review.md
+│   │   ├── phase1_ec_pain_points.md
+│   │   ├── phase2_competitor_mapping.md
+│   │   ├── phase3_shopify_api_technical.md
+│   │   ├── phase4_contact_channels.md
+│   │   ├── phase5_solution_design.md
+│   │   └── phase6_interview_script.md
+│   ├── customer-research-beauty/
+│   │   └── full_report.md
+│   ├── customer-research-dental/
+│   │   └── full_report.md
+│   ├── customer-research-professional/
+│   │   └── full_report.md
+│   ├── integrated-business-plan-v2/
+│   │   ├── 01-executive-summary.md
+│   │   ├── 02-segments-pains.md
+│   │   ├── 03-solution-channels.md
+│   │   ├── 04-roadmap.md
+│   │   ├── 05-financials.md
+│   │   └── 06-kpi-risks.md
+│   ├── verification-v3/
+│   │   ├── a1_diagnostic_prototype.py
+│   │   ├── day3_integrated_judgment.md
+│   │   ├── day3_supplement_freelance_cases.md
+│   │   ├── outreach_templates.md
+│   │   ├── quality_review_opus.md
+│   │   ├── r5_4_meta_verification.md
+│   │   ├── sample_diagnostic_report.md
+│   │   ├── track_a_market_research.md
+│   │   ├── track_b_structural_analysis.md
+│   │   └── track_c_persona_adversarial.md
+│   ├── .gitkeep
+│   ├── ai-utilization-plan-v7.md
+│   ├── hypothesis-verification-plan.md
+│   ├── integrated-business-plan-v2.md
+│   ├── integrated-business-plan.md
+│   ├── mvp-build-plan.md
+│   ├── new_project_proposals_20260501.md
+│   ├── recommendation.md
+│   ├── session-summary-WDemK.md
+│   ├── shigyou-mvp-roadmap.md
+│   └── weekly-execution-plan.md
 ├── skills/
-│   ├── 01_profiler.md ～ 06_synthesizer.md
-├── state/session.json
+│   ├── 01_profiler.md
+│   ├── 02_market_scout.md
+│   ├── 03_ai_leverage.md
+│   ├── 04_feasibility.md
+│   ├── 05_revenue_model.md
+│   └── 06_synthesizer.md
+├── state/
+│   └── session.json
 ├── tools/
-│   └── a1_diagnostic/           ← 診断ツール
+│   └── a1_diagnostic/
 │       ├── app.py
-│       ├── scoring.py
-│       ├── proposal.py
 │       ├── pdf_export.py
-│       ├── test_diagnostic.py
-│       └── requirements.txt
-└── outputs/
-    ├── ai-utilization-plan-v7.md
-    ├── integrated-business-plan-v2/
-    │   └── 01～06.md
-    ├── customer-research/       ← EC・美容・歯科・専門職
-    ├── verification-v3/
-    ├── shigyou-mvp-roadmap.md
-    ├── weekly-execution-plan.md
-    └── recommendation.md
+│       ├── proposal.py
+│       ├── requirements.txt
+│       ├── scoring.py
+│       └── test_diagnostic.py
+├── .gitignore
+├── CLAUDE.md
+├── FILE_INDEX.md
+├── README.md
+├── Skill Sheet 男座員也 202601.docx
+├── tasks.md
+└── Timeout_Prevention.md
 ```
 
 ---
 
-## 📑 全ファイル一覧
+## ファイル詳細
 
-| パス | 種別 | 説明 |
+### Documentation (48件)
+
+| ファイル | サイズ | 説明 |
 |---|---|---|
-| `CLAUDE.md` | ドキュメント | 運用ルール・指針 |
-| `skills/01_profiler.md` | ドキュメント | プロファイラースキル定義 |
-| `skills/06_synthesizer.md` | ドキュメント | シンセサイザースキル定義 |
-| `state/session.json` | データ | セッション状態管理 |
-| `tools/a1_diagnostic/app.py` | Python | 診断ツールメインアプリ（Streamlit） |
-| `tools/a1_diagnostic/scoring.py` | Python | スコアリングロジック |
-| `tools/a1_diagnostic/proposal.py` | Python | 提案書生成 |
-| `tools/a1_diagnostic/pdf_export.py` | Python | PDF出力 |
-| `tools/a1_diagnostic/test_diagnostic.py` | Python | 診断テスト |
-| `tools/a1_diagnostic/requirements.txt` | 設定 | 診断ツール依存関係 |
-| `outputs/ai-utilization-plan-v7.md` | ドキュメント | AI活用計画v7 |
-| `outputs/integrated-business-plan-v2/` | ドキュメント | 統合ビジネスプランv2（01〜06章） |
-| `outputs/customer-research/` | ドキュメント | 顧客調査（EC・美容・歯科・専門職） |
-| `outputs/verification-v3/` | ドキュメント | 市場調査・構造分析・ペルソナ・メタ検証 |
-| `outputs/shigyou-mvp-roadmap.md` | ドキュメント | 士業向けMVPロードマップ |
-| `outputs/weekly-execution-plan.md` | ドキュメント | 週次実行計画 |
-| `outputs/recommendation.md` | ドキュメント | 推奨アクション |
+| `CLAUDE.md` | 5.3 KB | Claude Code プロジェクト設定・命名ルール |
+| `FILE_INDEX.md` | 3.5 KB | （このファイル）全ファイルインデックス |
+| `outputs/ai-utilization-plan-v7.md` | 40.3 KB | Markdown ドキュメント |
+| `outputs/customer-research-beauty/full_report.md` | 76.5 KB | リサーチ出力データ |
+| `outputs/customer-research-dental/full_report.md` | 76.1 KB | リサーチ出力データ |
+| `outputs/customer-research-professional/full_report.md` | 74.3 KB | リサーチ出力データ |
+| `outputs/customer-research/full_report_v2.md` | 159.0 KB | リサーチ出力データ |
+| `outputs/customer-research/full_report.md` | 133.6 KB | リサーチ出力データ |
+| `outputs/customer-research/meta_review.md` | 14.2 KB | リサーチ出力データ |
+| `outputs/customer-research/phase1_ec_pain_points.md` | 23.6 KB | リサーチ出力データ |
+| `outputs/customer-research/phase2_competitor_mapping.md` | 21.1 KB | リサーチ出力データ |
+| `outputs/customer-research/phase3_shopify_api_technical.md` | 23.4 KB | リサーチ出力データ |
+| `outputs/customer-research/phase4_contact_channels.md` | 36.8 KB | リサーチ出力データ |
+| `outputs/customer-research/phase5_solution_design.md` | 12.3 KB | リサーチ出力データ |
+| `outputs/customer-research/phase6_interview_script.md` | 15.6 KB | リサーチ出力データ |
+| `outputs/hypothesis-verification-plan.md` | 36.2 KB | Markdown ドキュメント |
+| `outputs/integrated-business-plan-v2.md` | 4.6 KB | Markdown ドキュメント |
+| `outputs/integrated-business-plan-v2/01-executive-summary.md` | 4.9 KB | リサーチ出力データ |
+| `outputs/integrated-business-plan-v2/02-segments-pains.md` | 5.2 KB | リサーチ出力データ |
+| `outputs/integrated-business-plan-v2/03-solution-channels.md` | 5.2 KB | リサーチ出力データ |
+| `outputs/integrated-business-plan-v2/04-roadmap.md` | 5.8 KB | リサーチ出力データ |
+| `outputs/integrated-business-plan-v2/05-financials.md` | 6.9 KB | リサーチ出力データ |
+| `outputs/integrated-business-plan-v2/06-kpi-risks.md` | 4.6 KB | リサーチ出力データ |
+| `outputs/integrated-business-plan.md` | 30.2 KB | Markdown ドキュメント |
+| `outputs/mvp-build-plan.md` | 1.9 KB | Markdown ドキュメント |
+| `outputs/new_project_proposals_20260501.md` | 16.6 KB | Markdown ドキュメント |
+| `outputs/recommendation.md` | 278.7 KB | Markdown ドキュメント |
+| `outputs/session-summary-WDemK.md` | 2.5 KB | Markdown ドキュメント |
+| `outputs/shigyou-mvp-roadmap.md` | 2.4 KB | Markdown ドキュメント |
+| `outputs/verification-v3/day3_integrated_judgment.md` | 25.5 KB | リサーチ出力データ |
+| `outputs/verification-v3/day3_supplement_freelance_cases.md` | 14.5 KB | リサーチ出力データ |
+| `outputs/verification-v3/outreach_templates.md` | 8.3 KB | リサーチ出力データ |
+| `outputs/verification-v3/quality_review_opus.md` | 8.0 KB | リサーチ出力データ |
+| `outputs/verification-v3/r5_4_meta_verification.md` | 21.3 KB | リサーチ出力データ |
+| `outputs/verification-v3/sample_diagnostic_report.md` | 2.7 KB | リサーチ出力データ |
+| `outputs/verification-v3/track_a_market_research.md` | 16.1 KB | リサーチ出力データ |
+| `outputs/verification-v3/track_b_structural_analysis.md` | 12.9 KB | リサーチ出力データ |
+| `outputs/verification-v3/track_c_persona_adversarial.md` | 53.3 KB | リサーチ出力データ |
+| `outputs/weekly-execution-plan.md` | 46.2 KB | Markdown ドキュメント |
+| `README.md` | 2.1 KB | リポジトリ概要・セットアップ手順 |
+| `skills/01_profiler.md` | 2.5 KB | Markdown ドキュメント |
+| `skills/02_market_scout.md` | 2.6 KB | Markdown ドキュメント |
+| `skills/03_ai_leverage.md` | 2.8 KB | Markdown ドキュメント |
+| `skills/04_feasibility.md` | 2.4 KB | Markdown ドキュメント |
+| `skills/05_revenue_model.md` | 2.9 KB | Markdown ドキュメント |
+| `skills/06_synthesizer.md` | 2.8 KB | Markdown ドキュメント |
+| `tasks.md` | 7.1 KB | タスク管理・セッション履歴 |
+| `Timeout_Prevention.md` | 4.9 KB | タイムアウト対策ガイド |
+
+### Code (6件)
+
+| ファイル | サイズ | 説明 |
+|---|---|---|
+| `outputs/verification-v3/a1_diagnostic_prototype.py` | 13.5 KB | リサーチ出力データ |
+| `tools/a1_diagnostic/app.py` | 7.4 KB | Python スクリプト |
+| `tools/a1_diagnostic/pdf_export.py` | 6.1 KB | Python スクリプト |
+| `tools/a1_diagnostic/proposal.py` | 5.7 KB | Python スクリプト |
+| `tools/a1_diagnostic/scoring.py` | 6.3 KB | Python スクリプト |
+| `tools/a1_diagnostic/test_diagnostic.py` | 2.3 KB | Python スクリプト |
+
+### Data (1件)
+
+| ファイル | サイズ | 説明 |
+|---|---|---|
+| `state/session.json` | 40.0 KB | JSON データ |
+
+### Asset (1件)
+
+| ファイル | サイズ | 説明 |
+|---|---|---|
+| `Skill Sheet 男座員也 202601.docx` | 825.3 KB | Word ドキュメント |
+
+### Config (2件)
+
+| ファイル | サイズ | 説明 |
+|---|---|---|
+| `.gitignore` | 82 B | Git 除外設定 |
+| `tools/a1_diagnostic/requirements.txt` | 49 B | Python 依存パッケージリスト |
+
+### Other (1件)
+
+| ファイル | サイズ | 説明 |
+|---|---|---|
+| `outputs/.gitkeep` | - | ファイル |
 
 ---
 
-## 🔖 ファイル更新ルール
-
-1. 新ファイル追加時: 該当セクションに1行追加
-2. ファイル削除・移動時: 該当行を削除または更新
-3. 更新後: `git add FILE_INDEX.md && git commit -m "docs: FILE_INDEX.md更新"`
+_自動生成: 2026-05-02 | 管理者: 男座員也（Kazuya Oza）_
