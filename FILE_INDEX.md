@@ -47,12 +47,6 @@
 │   ├── customer-research-professional/
 │   │   └── full_report.md
 │   ├── integrated-business-plan-v2/
-│   │   ├── 01-executive-summary.md
-│   │   ├── 02-segments-pains.md
-│   │   ├── 03-solution-channels.md
-│   │   ├── 04-roadmap.md
-│   │   ├── 05-financials.md
-│   │   └── 06-kpi-risks.md
 │   ├── verification-v3/
 │   │   ├── a1_diagnostic_prototype.py
 │   │   ├── day3_integrated_judgment.md
@@ -67,7 +61,6 @@
 │   ├── .gitkeep
 │   ├── ai-utilization-plan-v7.md
 │   ├── hypothesis-verification-plan.md
-│   ├── integrated-business-plan-v2.md
 │   ├── integrated-business-plan.md
 │   ├── mvp-build-plan.md
 │   ├── new_project_proposals_20260501.md
@@ -125,13 +118,6 @@
 | `outputs/customer-research/phase5_solution_design.md` | 12.3 KB | リサーチ出力データ |
 | `outputs/customer-research/phase6_interview_script.md` | 15.6 KB | リサーチ出力データ |
 | `outputs/hypothesis-verification-plan.md` | 36.2 KB | Markdown ドキュメント |
-| `outputs/integrated-business-plan-v2.md` | 4.6 KB | Markdown ドキュメント |
-| `outputs/integrated-business-plan-v2/01-executive-summary.md` | 4.9 KB | リサーチ出力データ |
-| `outputs/integrated-business-plan-v2/02-segments-pains.md` | 5.2 KB | リサーチ出力データ |
-| `outputs/integrated-business-plan-v2/03-solution-channels.md` | 5.2 KB | リサーチ出力データ |
-| `outputs/integrated-business-plan-v2/04-roadmap.md` | 5.8 KB | リサーチ出力データ |
-| `outputs/integrated-business-plan-v2/05-financials.md` | 6.9 KB | リサーチ出力データ |
-| `outputs/integrated-business-plan-v2/06-kpi-risks.md` | 4.6 KB | リサーチ出力データ |
 | `outputs/integrated-business-plan.md` | 30.2 KB | Markdown ドキュメント |
 | `outputs/mvp-build-plan.md` | 1.9 KB | Markdown ドキュメント |
 | `outputs/new_project_proposals_20260501.md` | 16.6 KB | Markdown ドキュメント |
@@ -199,4 +185,7 @@
 _自動生成: 2026-05-02 | 管理者: 男座員也（Kazuya Oza）_
 
 <!-- ブランチマージで追加 2026-05-11 -->
-- outputs/integrated-business-plan-v2/00-v2.1-confirmed-elements.md
+
+<!-- ブランチマージで追加 2026-05-15 -->
+- outputs/integrated-business-plan-v2.1.1.md
+- outputs/expert-network-channel-strategy.md
