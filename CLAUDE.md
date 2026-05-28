@@ -35,12 +35,12 @@
 
 | コマンド | 読み込むスキル | 説明 |
 |---------|--------------|------|
-| `/profile` | skills/01_profiler.md | スキル・経験・制約の構造化インタビュー |
-| `/scout` | skills/02_market_scout.md | スモールビジネス市場の需要調査 |
-| `/ai-leverage` | skills/03_ai_leverage.md | AI活用率と実質時給の算出 |
-| `/feasibility` | skills/04_feasibility.md | 実行可能性の多軸評価 |
-| `/revenue` | skills/05_revenue_model.md | 収益モデルとポートフォリオ設計 |
-| `/synthesize` | skills/06_synthesizer.md | 最終統合レポート生成 |
+| `/profile` | agents/01_profiler.md | スキル・経験・制約の構造化インタビュー |
+| `/scout` | agents/02_market_scout.md | スモールビジネス市場の需要調査 |
+| `/ai-leverage` | agents/03_ai_leverage.md | AI活用率と実質時給の算出 |
+| `/feasibility` | agents/04_feasibility.md | 実行可能性の多軸評価 |
+| `/revenue` | agents/05_revenue_model.md | 収益モデルとポートフォリオ設計 |
+| `/synthesize` | agents/06_synthesizer.md | 最終統合レポート生成 |
 | `/status` | — | state/session.json を読んで進捗を表示 |
 | `/full-run` | 全スキル順次実行 | 01→06を順に実行し、各完了後にstate更新 |
 
@@ -180,11 +180,11 @@
 ## Skill 起動ルール（v2.0 / 2026-05-28）
 以下のスキルは **必須・スキップ禁止**。該当シーンでは SKILL.md を読んでから作業を開始すること。
 
-- **新機能実装・設計を始める前に必ず** `.claude/skills/sp-brainstorming/SKILL.md` でアイデアを出し、`.claude/skills/sp-writing-plans/SKILL.md` で計画を作成してから着手する
-- **複雑な多段タスクは** `.claude/skills/sp-executing-plans/SKILL.md` の手順で実行する
-- **アーキ図・フロー図が必要な時は必ず** `.claude/skills/mermaid-agents365/SKILL.md` を読んでからダイアグラムを作成する
-- **成果物を納品・コミットする前に必ず** `.claude/skills/sp-verification-before-completion/SKILL.md` のチェックリストを実行する
-- **要件調査が真に必要な時のみ** `.claude/skills/research-deep/SKILL.md` を読んで Web リサーチを実行する
+- **新機能実装・設計を始める前に必ず** `.claude/agents/sp-brainstorming/SKILL.md` でアイデアを出し、`.claude/agents/sp-writing-plans/SKILL.md` で計画を作成してから着手する
+- **複雑な多段タスクは** `.claude/agents/sp-executing-plans/SKILL.md` の手順で実行する
+- **アーキ図・フロー図が必要な時は必ず** `.claude/agents/mermaid-agents365/SKILL.md` を読んでからダイアグラムを作成する
+- **成果物を納品・コミットする前に必ず** `.claude/agents/sp-verification-before-completion/SKILL.md` のチェックリストを実行する
+- **要件調査が真に必要な時のみ** `.claude/agents/research-deep/SKILL.md` を読んで Web リサーチを実行する
 <!-- SKILLS_RULES_END -->
 
 <!-- GLOBAL_RULES_END -->
